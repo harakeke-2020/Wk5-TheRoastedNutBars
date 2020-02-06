@@ -17,15 +17,16 @@ class App extends React.Component {
 
   catHandler = evt => {
     this.setState({
-      catPoints: this.state.catPoints + 5
+      catPoints: this.state.catPoints + 2
     })
   }
+
   render () {
     return (
     <>
     <h1 className="title">Cats vs Dogs</h1>
-    <Points />
-    <Cats />
+    <h3>Cats: {this.state.catPoints} vs {this.state.dogPoints} :Dogs</h3>
+    <Cats pointClick={this.catHandler}/>
     <CatFacts />
 
     </>

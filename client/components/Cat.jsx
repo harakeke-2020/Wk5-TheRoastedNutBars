@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { getCats } from './api'
+import CatFacts from './CatFacts'
 
 export default class Cats extends React.Component {
   state = {
@@ -16,10 +17,20 @@ export default class Cats extends React.Component {
       })
   }
 
+  clickHandler = (evt) => {
+    this.props.pointClick()
+    getCats()
+      .then(response => {
+        this.setState({
+          file: response.body.file
+        })
+      })
+  }
+
   render () {
     return (
       <>
-        <img src={this.state.file} width="500" />
+        <img src={this.state.file} width="500" onClick={this.clickHandler}/>
       </>
     )
   }
