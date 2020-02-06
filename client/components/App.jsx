@@ -3,20 +3,34 @@ import Cats from './Cat'
 import CatFacts from './CatFacts'
 import Points from './Points'
 
-const App = () => {
+class App extends React.Component {
+  state = {
+    catPoints: 0,
+    dogPoints: 0
+  }
 
-  return (
+  dogHandler = evt => {
+    this.setState({
+      dogPoints: this.state.dogPoints + 1
+    })
+  }
+
+  catHandler = evt => {
+    this.setState({
+      catPoints: this.state.catPoints + 5
+    })
+  }
+  render () {
+    return (
     <>
     <h1 className="title">Cats vs Dogs</h1>
-<<<<<<< HEAD
     <Points />
-=======
     <Cats />
->>>>>>> 342242638a394cee47fc8e24b2b50b42a5b3e23a
     <CatFacts />
 
     </>
-  )
+    )
+  }
 }
 
 export default App
