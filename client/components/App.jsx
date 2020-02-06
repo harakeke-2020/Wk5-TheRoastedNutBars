@@ -1,6 +1,7 @@
 import React from 'react'
 import Cats from './Cat'
 import CatFacts from './CatFacts'
+import Dogs from './Dog'
 import Points from './Points'
 
 class App extends React.Component {
@@ -24,10 +25,12 @@ class App extends React.Component {
   render () {
     return (
     <>
-    <h1 className="title">Cats vs Dogs</h1>
-    <h3>Cats: {this.state.catPoints} vs {this.state.dogPoints} :Dogs</h3>
+    <h1 className="title">Cutey Pageant</h1>
     <Cats pointClick={this.catHandler}/>
+    <p> Cats:{this.state.catPoints} </p> 
     <CatFacts />
+    <Dogs />
+    <p>Dog:{this.state.dogPoints}</p>
 
     </>
     )
