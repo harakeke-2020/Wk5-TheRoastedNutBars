@@ -4,8 +4,7 @@ const catFactsUrl = 'http://localhost:3000/api/v1/catFacts'
 
 export function getFacts () {
   return request
-    .get(catFactsUrl)
-    .then(response => response.body)
+    .get(`${catFactsUrl}`)
 }
 
 // export function appendWidget (widget) {
