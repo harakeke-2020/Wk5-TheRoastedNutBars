@@ -7,6 +7,7 @@
 
 1. Add a scoreboard 
 2. Return only cat gifs
+3. Add more things to the rumble.
 
 # APIs 
 

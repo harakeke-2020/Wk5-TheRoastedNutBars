@@ -16,10 +16,16 @@ export default class Cats extends React.Component {
       })
   }
 
+  isGif () {
+    getCats()
+    
+  }
+
+
   render () {
     return (
       <>
-        <img src={this.state.file} width="500" />
+        <img src={this.state.file} width="400" />
       </>
     )
   }
