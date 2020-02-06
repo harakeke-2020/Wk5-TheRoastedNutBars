@@ -1,10 +1,12 @@
 # MVP
 
 1. User can select a winner. 
+2. The group has fun.
 
 # Stretch 
 
 1. Add a scoreboard 
+2. Return only cat gifs
 
 # APIs 
 
