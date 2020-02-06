@@ -5,7 +5,6 @@ import { getFacts } from './api'
 const randomNumber = Math.floor(Math.random() * Math.floor(200))
 const randomNumber2 = Math.floor(Math.random() * Math.floor(200))
 
-
 class CatFacts extends React.Component {
   state = {
     catFactUrl: '',
