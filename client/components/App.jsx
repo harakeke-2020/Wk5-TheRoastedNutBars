@@ -2,6 +2,7 @@ import React from 'react'
 import Cats from './Cat'
 import CatFacts from './CatFacts'
 import Dogs from './Dog'
+import DogFacts from './DogFacts'
 import Points from './Points'
 
 class App extends React.Component {
@@ -47,7 +48,8 @@ class App extends React.Component {
           <div className="column">
             <Dogs pointClick={this.dogHandler}/>
             <p>Dogs:{this.state.dogPoints}</p>
-            {/* <DogFacts /> */}
+            <DogFacts />
+
           </div>
         </div>
       </div>

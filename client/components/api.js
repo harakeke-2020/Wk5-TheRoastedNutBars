@@ -3,6 +3,7 @@ import request from 'superagent'
 const catFactsUrl = 'http://localhost:3000/api/v1/catFacts'
 const catImageUrl = 'https://aws.random.cat/meow'
 const dogApiUrl = 'https://random.dog/woof.json'
+const dogFactsUrl = 'http://localhost:3000/api/v1/dogFacts'
 
 export function getFacts () {
   return request
@@ -29,6 +30,10 @@ export async function getDogsAsync () {
   } while (dogImageUrl.includes('mp4'))
 
   return dogImageUrl
+}
+
+export function getDogFacts () {
+  return request.get(dogFactsUrl)
 }
 
 // export async function getDogsAsyncWithoutDo () {
