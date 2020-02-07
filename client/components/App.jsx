@@ -10,29 +10,46 @@ class App extends React.Component {
     dogPoints: 0
   }
 
-  dogHandler = evt => {
-    this.setState({
-      dogPoints: this.state.dogPoints + 1
-    })
+  // dogHandler = evt => {
+  //   this.setState({
+  //     dogPoints: this.state.dogPoints + 1
+  //   })
+  // }
+
+  // catHandler = evt => {
+  //   this.setState({
+  //     catPoints: this.state.catPoints + 2
+  //   })
+  // }
+
+  componentDidMount () {
+
   }
 
-  catHandler = evt => {
+  scoreHandler = evt => {
     this.setState({
-      catPoints: this.state.catPoints + 2
+      dogPoints: this.state.dogPoints + 1,
+      catPoints: this.state.catPoints + 1
     })
   }
 
   render () {
     return (
-    <>
-    <h1 className="title">Cutey Pageant</h1>
-    <Cats pointClick={this.catHandler}/>
-    <p> Cats:{this.state.catPoints} </p> 
-    <CatFacts />
-    <Dogs />
-    <p>Dog:{this.state.dogPoints}</p>
-
-    </>
+      <div className="container">
+        <h1 className="title">Cutey Pageant</h1>
+        <div className="columns">
+          <div className="column">
+            <Cats pointClick={this.scoreHandler} />
+            <p> Cats:{this.state.catPoints} </p>
+            <CatFacts />
+          </div>
+          <div className="column">
+            <Dogs pointClick={this.scoreHandler}/>
+            <p>Dogs:{this.state.dogPoints}</p>
+            {/* <DogFacts /> */}
+          </div>
+        </div>
+      </div>
     )
   }
 }

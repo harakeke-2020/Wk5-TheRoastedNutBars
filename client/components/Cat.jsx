@@ -30,7 +30,7 @@ export default class Cats extends React.Component {
   render () {
     return (
       <>
-        <img src={this.state.file} width="500" onClick={this.clickHandler}/>
+        <img src={this.state.file} width="500" height="500" onClick={this.clickHandler}/>
       </>
     )
   }

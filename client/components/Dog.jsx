@@ -18,13 +18,19 @@ export default class Dogs extends React.Component {
     })
 
   clickHandler = (evt) => {
-    this.props.
+    this.props.pointClick()
+    getDogsAsync()
+      .then(response => {
+        this.setState({
+          dogImage: response.body.url
+        })
+      })
   }
 
   render () {
     return (
       <>
-        <img src={this.state.dogImage} width="400" onClick={this.clickHandler}/>
+        <img src={this.state.dogImage} width="500" height="500" onClick={this.clickHandler}/>
       </>
     )
   }

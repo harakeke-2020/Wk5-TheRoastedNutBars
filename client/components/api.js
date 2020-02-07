@@ -14,11 +14,11 @@ export function getCats () {
     .get(catImageUrl)
 }
 
-export function getDogs () {
-  return request
-    .get(dogApiUrl)
-    .then(response => response.body.url)
-}
+// export function getDogs () {
+//   return request
+//     .get(dogApiUrl)
+//     .then(response => response.body.url)
+// }
 
 export async function getDogsAsync () {
   let dogImageUrl
