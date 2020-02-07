@@ -1,13 +1,16 @@
 # MVP
 
-1. User can select a winner. 
-2. The group has fun.
+[x] User can select a winner. 
+[x] The group has fun.
 
 # Stretch 
 
-1. Add a scoreboard 
-2. Return only cat gifs
-3. Add more things to the rumble (consume more APIs)
+[x] Add a scoreboard 
+[] Set a game length and show a winner
+[] Return only cat gifs
+[] Add more things to the rumble (consume more APIs)
+
+![Baby Yoda FTW!!](https://i.insider.com/5e32f2a324306a19834af322?width=600&format=jpeg&auto=webp)
 
 # APIs 
 
