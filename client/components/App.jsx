@@ -37,17 +37,17 @@ class App extends React.Component {
   render () {
     return (
       <div className="container">
-        <h1 className="title">Cutey Pageant</h1>
+        <h1 className="title is-1, has-text-primary">Cutey Pageant</h1>
         <div className="columns">
           <div className="column">
             <Cats pointClick={this.catHandler} />
-            <p> Cats:{this.state.catPoints} </p>
+            <p className="has-text-primary, title is-2"> Cat Score: {this.state.catPoints} </p>
             <CatFacts />
           </div>
 
           <div className="column">
             <Dogs pointClick={this.dogHandler}/>
-            <p>Dogs:{this.state.dogPoints}</p>
+            <p className="has-text-primary, title is-2"> Dog Score: {this.state.dogPoints}</p>
             <DogFacts />
 
           </div>

@@ -38,9 +38,8 @@ export default class Cats extends React.Component {
         ? <div>Loading...</div>
         : (<img
           src={this.state.file}
-          width="500"
-          height="500"
-          onClick={this.clickHandler}/>)}
+          onClick={this.clickHandler}
+          className="image is-500x500"/>)}
       </>
     )
   }

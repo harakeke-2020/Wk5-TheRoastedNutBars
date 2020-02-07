@@ -18,7 +18,7 @@ class DogFacts extends React.Component {
   render () {
     return (
       <>
-        <h2>Doggo Facts</h2>
+        <h2 className="subtitle">Did you know..</h2>
         <p>{this.state.dogFact}</p>
       </>
     )
