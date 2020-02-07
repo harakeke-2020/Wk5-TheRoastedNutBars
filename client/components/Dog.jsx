@@ -4,7 +4,8 @@ import { getDogs, getDogsAsync, getDogsAsyncWithoutDo } from './api'
 
 export default class Dogs extends React.Component {
   state = {
-    dogImage: ''
+    dogImage: '',
+    loading: true
   }
 
   componentDidMount () {
@@ -14,24 +15,29 @@ export default class Dogs extends React.Component {
 
   setPupUrl = (url) =>
     this.setState({
-      dogImage: url
+      dogImage: url,
+      loading: false
     })
 
   clickHandler = (evt) => {
+    this.setState({ loading: true })
+
     this.props.pointClick()
     getDogsAsync()
-      .then(response => {
-        this.setState({
-          dogImage: response.body.url
-        })
-      })
+      .then(this.setPupUrl)
   }
 
   render () {
     return (
       <>
-        <img src={this.state.dogImage} width="500" height="500" onClick={this.clickHandler}/>
-      </>
+        {this.state.loading
+          ? <div>Loading...</div>
+          : (<img
+            src={this.state.dogImage}
+            width="500"
+            height="500"
+            onClick={this.clickHandler}/>)}
+        </>
     )
   }
 }
